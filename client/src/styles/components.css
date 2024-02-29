@@ -8,12 +8,9 @@
   user-select: none;
 }
 
-canvas {
+.index_canvas {
   position: absolute;
-  background-color: red;
   top: 50%;
   left: 50%;
-  width: 572px; 
-  height: 352px;
   transform: translate(-50%, -50%);
 }

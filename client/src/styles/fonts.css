@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'GothicFont1';
+  src: url('../assets/fonts/Gritluef Demo.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.gothic_font_1 {
+  font-family: 'GothicFont1', sans-serif;
+}
+
+@font-face {
+  font-family: 'GothicFont2';
+  src: url('../assets/fonts/HELLFIRE font.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.gothic_font_2 {
+    font-family: 'GothicFont2', sans-serif;
+  }
+
+@font-face {
+  font-family: 'GothicFont3';
+  src: url('../assets/fonts/Racula Free Trial.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.gothic_font_3 {
+    font-family: 'GothicFont3', sans-serif;
+  }
