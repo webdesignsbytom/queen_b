@@ -1,17 +1,24 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 // Images
 import Logo1 from '../../assets/wdbt-black.svg';
 import Logo2 from '../../assets/logos/queen_b_logo_1.png';
 
 function Navbar() {
+  let navigate = useNavigate();
+
+  const navigateToHome = () => {
+    navigate('/home', { replace: true });
+  };
+
   return (
     <nav className='grid text-white border-b-2 border-purple-900 border-solid'>
       <div className='grid grid-cols-reg p-1'>
+        
         {/* Logo */}
         <section className=''>
-          <div>
-            <img src={Logo2} alt='' className='h-24 w-24' />
+          <div onClick={navigateToHome}>
+            <img src={Logo2} alt='' className='h-24 w-24 cursor-pointer' />
           </div>
         </section>
 

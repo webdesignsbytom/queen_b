@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 // Components
 import Navbar from '../../components/nav/Navbar';
+import ImageArrayComponent from '../../components/home/ImageArrayComponent';
+// Context
+import { ToggleContext } from '../../context/ToggleContext';
 // Images
 import Logo1 from '../../assets/logos/queen_b_logo_2.jpg';
-import ImageArrayComponent from '../../components/home/ImageArrayComponent';
 
 function HomePage() {
+  const { setActiveNav } = useContext(ToggleContext);
+
+  useEffect(() => {
+    setActiveNav('/home');
+  }, []);
+
   return (
     <div className='h-dvh w-full overflow-hidden'>
       <div className='grid grid-rows-reg bg-black h-full w-full'>

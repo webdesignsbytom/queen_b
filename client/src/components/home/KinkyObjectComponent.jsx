@@ -2,19 +2,17 @@ import React, { useState } from 'react';
 // Images
 import Logo1 from '../../assets/logos/queen_b_logo_2.jpg';
 
-function ImageArrayComponent() {
-  const [galleryImageArray, setGalleryImageArray] = useState([
+function KinkyObjectComponent() {
+  const [kinkyObjectImageArray, setKinkyObjectImageArray] = useState([
     Logo1,
     Logo1,
     Logo1,
   ]);
-
   return (
     <section className='grid'>
       <div className='grid grid-cols-3 justify-center'>
-
         {/* Image data */}
-        {galleryImageArray.map((image, index) => {
+        {kinkyObjectImageArray.map((image, index) => {
           return (
             <div className='grid justify-center'>
               <div
@@ -31,4 +29,4 @@ function ImageArrayComponent() {
   );
 }
 
-export default ImageArrayComponent;
+export default KinkyObjectComponent;
