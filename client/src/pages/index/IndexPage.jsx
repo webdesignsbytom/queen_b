@@ -33,7 +33,7 @@ function IndexPage() {
                   </div>
                   <div>
                     <h3>
-                      A lustful and sensuously kinky Mistress who's very
+                      A lustful and sensuously kinky Goddess who's very
                       presence commands your devotion.
                     </h3>
                   </div>
