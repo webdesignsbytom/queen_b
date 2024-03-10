@@ -33,8 +33,8 @@ function IndexPage() {
                   </div>
                   <div>
                     <h3>
-                      A lustful and sensuously kinky Goddess who's very
-                      presence commands your devotion.
+                      A lustful and sensuously kinky Goddess who's very presence
+                      commands your devotion.
                     </h3>
                   </div>
                   <div>
@@ -50,8 +50,11 @@ function IndexPage() {
               <section className='grid pt-4'>
                 {/* Same font at Queen B */}
                 <div className='grid justify-center py-2'>
-                  <button onClick={navigateToHomePage} className='px-10 py-2 shadow shadow-white rounded-md bg-purple-900 active:scale-95 hover:brightness-95 text-white text-xl font-semibold uppercase '>
-                    Enter
+                  <button
+                    onClick={navigateToHomePage}
+                    className='px-10 py-2 shadow shadow-white rounded-md bg-purple-900 active:scale-95 hover:brightness-90 text-white text-xl font-semibold uppercase '
+                  >
+                    Enter Now
                   </button>
                 </div>
               </section>
