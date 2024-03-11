@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 // Images
-import Logo1 from '../../assets/logos/queen_b_logo_2.jpg';
+import Logo1 from '../../assets/images/logos/logo2.png';
 
 function ImageArrayComponent() {
   const [galleryImageArray, setGalleryImageArray] = useState([

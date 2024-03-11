@@ -12,7 +12,7 @@ function App() {
   return (
     <Routes>
       <Route path='/' index element={<IndexPage />} />
-      <Route path='/home' element={<HomePage />} />
+      <Route path='/explore' element={<HomePage />} />
       <Route path='/gallery-of-the-queen' element={<GalleryPage />} />
       <Route path='/fetish-pleasure' element={<FetishesPage />} />
       <Route path='/tributes-to-the-queen' element={<TributePage />} />

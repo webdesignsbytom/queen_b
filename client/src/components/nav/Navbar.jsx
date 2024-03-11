@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 // Images
-import Logo1 from '../../assets/wdbt-black.svg';
-import Logo2 from '../../assets/logos/queen_b_logo_1.png';
+import Logo2 from '../../assets/images/logos/logo1.png';
 
 function Navbar() {
   let navigate = useNavigate();
@@ -12,7 +11,7 @@ function Navbar() {
   };
 
   return (
-    <nav className='grid text-white border-b-2 border-purple-900 border-solid'>
+    <nav className='grid text-yellow-600 border-b-2 border-purple-900 border-solid'>
       <div className='grid grid-cols-reg p-1'>
         
         {/* Logo */}
@@ -31,8 +30,8 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link to='/home'>
-                <span>Home</span>
+              <Link to='/explore'>
+                <span>Explore</span>
               </Link>
             </li>
             <li>

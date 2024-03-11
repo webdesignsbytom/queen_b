@@ -7,7 +7,7 @@ function IndexPage() {
   let navigate = useNavigate();
 
   const navigateToHomePage = () => {
-    navigate('/home', { replace: true });
+    navigate('/explore', { replace: true });
   };
 
   return (
