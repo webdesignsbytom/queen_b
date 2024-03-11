@@ -17,7 +17,7 @@ function Navbar() {
         {/* Logo */}
         <section className=''>
           <div onClick={navigateToHome}>
-            <img src={Logo2} alt='' className='h-24 w-24 cursor-pointer' />
+            <img src={Logo2} alt='' className='h-20 2xl:h-24 w-20 2xl:w-24 cursor-pointer' />
           </div>
         </section>
 

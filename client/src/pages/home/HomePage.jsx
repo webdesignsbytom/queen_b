@@ -26,7 +26,7 @@ function HomePage() {
 
         {/* Main Content */}
         {/* Header */}
-        <header className='grid mt-6 relative'>
+        <header className='grid mt-2 2xl:mt-6 relative'>
           <section className='grid w-3/4 mx-auto'>
             <div>
               <img src={BackgroundImage1} className='w-full h-full blur-sm' />
@@ -35,17 +35,17 @@ function HomePage() {
 
           <section className='absolute top-1/2 transform left-32 -translate-y-1/2'>
             <div>
-              <img src={Logo} className='w-[500px]' />
+              <img src={Logo} className='md:w-[300px] 2xl:w-[500px]' alt='Logo' />
             </div>
           </section>
 
-          <section className='absolute top-1/2 transform right-10 -translate-x-1/2 -translate-y-1/2 h-full'>
+          <section className='absolute top-1/2 transform -right-10 2xl:right-10 -translate-x-1/2 -translate-y-1/2 h-full'>
             <div className='grid h-full'>
-              <img src={Queen1} className='object-cover w-full h-full' />
+              <img src={Queen1} className='object-cover w-full h-full' alt='The Queen' />
             </div>
           </section>
 
-          <section className='absolute top-1/2 transform left-1/2 -translate-x-1/2'>
+          <section className='absolute top-1/2 transform -translate-y-1/2 left-1/2 -translate-x-1/2'>
             <div className='grid bg-[#00000070] px-4 rounded-lg py-2 text-center gothic_font_1'>
               <div>
                 <h1 className='text-yellow-600 text-6xl font-bold'>
@@ -77,7 +77,7 @@ function HomePage() {
                   </div>
 
                   <section className='w-3/4'>
-                    <div className='pt-2 text-2xl'>
+                    <div className='pt-2 md:text-xl 2xl:text-2xl'>
                       <p>
                         <span className='italic text-3xl'>
                           I do not need you.
@@ -100,7 +100,7 @@ function HomePage() {
                       </div>
                     </div>
 
-                    <div className='pt-2 text-2xl'>
+                    <div className='pt-2 md:text-xl 2xl:text-2xl'>
                       <p>
                         You can try and get my attention, a Queen loves to be
                         entertained by her servants after all. Consider yourself
@@ -127,7 +127,7 @@ function HomePage() {
                       </div>
                     </div>
 
-                    <div className='pt-2 text-2xl'>
+                    <div className='pt-2 md:text-xl 2xl:text-2xl'>
                       <p>
                         I have found that contentment and inner peace comes from
                         knowing who you are, accepting who you are and being
@@ -145,9 +145,9 @@ function HomePage() {
                 </article>
 
                 {/* Image */}
-                <section className='grid h-full -ml-20'>
+                <section className='grid h-full md:-ml-44 2xl:-ml-20'>
                   <div className='grid h-full'>
-                    <img src={Queen2} className='object-fill w-[80%] h-full' />
+                    <img src={Queen2} className='object-fill w-[80%] h-full' alt='The Queen' />
                   </div>
                 </section>
               </section>
