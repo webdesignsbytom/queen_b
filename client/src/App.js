@@ -7,6 +7,7 @@ import TestPage2 from './pages/test/TestPage2';
 import GalleryPage from './pages/gallery/GalleryPage';
 import FetishesPage from './pages/fetishes/FetishesPage';
 import TributePage from './pages/tribute/TributePage';
+import BlogPage from './pages/blog/BlogPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route path='/gallery-of-the-queen' element={<GalleryPage />} />
       <Route path='/fetish-pleasure' element={<FetishesPage />} />
       <Route path='/tributes-to-the-queen' element={<TributePage />} />
+      <Route path='/kinky-blog' element={<BlogPage />} />
       <Route path='/test' element={<TestPage />} />
       <Route path='/test2' element={<TestPage2 />} />
     </Routes>

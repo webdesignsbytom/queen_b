@@ -50,7 +50,7 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link to='/'>
+              <Link to='/kinky-blog'>
                 <span>KinkyBlog</span>
               </Link>
             </li>

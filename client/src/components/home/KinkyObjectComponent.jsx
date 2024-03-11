@@ -8,6 +8,7 @@ function KinkyObjectComponent() {
     Logo1,
     Logo1,
   ]);
+  
   return (
     <section className='grid'>
       <div className='grid grid-cols-3 justify-center'>

@@ -8,6 +8,8 @@ import { ToggleContext } from '../../context/ToggleContext';
 import Logo from '../../assets/images/logos/logo2.png';
 import BackgroundImage1 from '../../assets/images/general/bg1.jpg';
 import Queen1 from '../../assets/images/queenB/queen1_nb.png';
+import Queen2 from '../../assets/images/queenB/queen4_nb.png';
+import InternalLinkCta from '../../components/cta/InternalLinkCta';
 
 function HomePage() {
   const { setActiveNav } = useContext(ToggleContext);
@@ -115,6 +117,16 @@ function HomePage() {
                       </p>
                     </div>
 
+                    <div className='grid text-3xl my-8 justify-center'>
+                      <div className='grid grid-flow-col mx-auto w-full gap-10'>
+                        <div>PLEASURE</div>
+                        <div>&#10070; </div>
+                        <div>PAIN</div>
+                        <div>&#10070; </div>
+                        <div>SUBMIT</div>
+                      </div>
+                    </div>
+
                     <div className='pt-2 text-2xl'>
                       <p>
                         I have found that contentment and inner peace comes from
@@ -133,12 +145,20 @@ function HomePage() {
                 </article>
 
                 {/* Image */}
-                <section className='grid h-full'>
+                <section className='grid h-full -ml-20'>
                   <div className='grid h-full'>
-                    <img src={Queen1} className='object-cover w-full h-full' />
+                    <img src={Queen2} className='object-fill w-[80%] h-full' />
                   </div>
                 </section>
               </section>
+
+              {/* Links CTA */}
+              <InternalLinkCta />
+
+              <section className='mt-20'>
+                <ImageArrayComponent displayNum={4} />
+              </section>
+              {/* Secondary article - images */}
             </div>
           </div>
           {/* <div className='grid bg-red-400 w-2/3 mx-auto'>
