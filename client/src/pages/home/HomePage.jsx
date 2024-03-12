@@ -96,7 +96,7 @@ function HomePage() {
                       <div className='grid grid-flow-col mx-auto w-full gap-10'>
                         <div>WHORES</div>
                         <div>&#10070; </div>
-                        <div>SISSIES</div>
+                        <div className='text-pink-400'>SISSIES</div>
                         <div>&#10070; </div>
                         <div>SADISM</div>
                       </div>
@@ -123,7 +123,7 @@ function HomePage() {
                       <div className='grid grid-flow-col mx-auto w-full gap-10'>
                         <div>PLEASURE</div>
                         <div>&#10070; </div>
-                        <div>PAIN</div>
+                        <div className='text-red-600'>PAIN</div>
                         <div>&#10070; </div>
                         <div>SUBMIT</div>
                       </div>

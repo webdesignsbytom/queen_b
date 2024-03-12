@@ -8,10 +8,10 @@ function KinkyRain() {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
     canvas.width = 900;
-    canvas.height = 352;
+    canvas.height = 200;
 
     let particlesArray = [];
-    const numberOfParticles = 12000;
+    const numberOfParticles = 8000;
     const detail = 1;
 
     // Define the calculateBrightness function here
@@ -69,7 +69,7 @@ function KinkyRain() {
     image.src = CuffsImage; // Updated to use the imported PNG image
     
     image.onload = function () {
-      ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+      ctx.drawImage(image, 0, 0, 300, 140);
       const pixels = ctx.getImageData(0, 0, canvas.width, canvas.height);
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
