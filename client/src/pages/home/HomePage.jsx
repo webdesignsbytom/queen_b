@@ -67,11 +67,13 @@ function HomePage() {
         <main className='grid bg-black'>
           <div className='mt-32 mb-10'>
             {/* Content */}
-            <div className='grid w-3/4 mx-auto h-full'>
+            <div className='grid w-[80%] mx-auto h-full'>
+              
               {/* Main desciption */}
-              <section className='grid grid-cols-rev h-full'>
+              <section className='grid grid-cols-eight20 w-full h-full ml-10'>
+
                 {/* Text */}
-                <article className='text-white grid grid-rows-reg'>
+                <article className='text-white grid grid-rows-reg z-10'>
                   <div className='text-5xl gothic_font_1'>
                     <h3>Humble yourself before me!</h3>
                   </div>
@@ -145,11 +147,12 @@ function HomePage() {
                 </article>
 
                 {/* Image */}
-                <section className='grid h-full md:-ml-44 2xl:-ml-20'>
-                  <div className='grid h-full'>
+                <section className='grid  h-full md:-ml-[20rem] 2xl:-ml-20'>
+                  <div className='grid h-full '>
                     <img src={Queen2} className='object-fill w-[80%] h-full' alt='The Queen' />
                   </div>
                 </section>
+
               </section>
 
               {/* Links CTA */}

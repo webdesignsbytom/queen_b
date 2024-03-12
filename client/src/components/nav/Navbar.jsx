@@ -25,37 +25,37 @@ function Navbar() {
         <section className='grid justify-end h-full w-full'>
           <ul className='grid grid-flow-col w-fit gap-4 items-center pr-8'>
             <li>
-              <Link to='/'>
+              <Link className='hover:text-yellow-800' to='/'>
                 <span>Welcome</span>
               </Link>
             </li>
             <li>
-              <Link to='/explore'>
+              <Link className='hover:text-yellow-800' to='/explore'>
                 <span>Explore</span>
               </Link>
             </li>
             <li>
-              <Link to='/gallery-of-the-queen'>
+              <Link className='hover:text-yellow-800' to='/gallery-of-the-queen'>
                 <span>Gallery</span>
               </Link>
             </li>
             <li>
-              <Link to='/fetish-pleasure'>
+              <Link className='hover:text-yellow-800' to='/fetish-pleasure'>
                 <span>Fetishes</span>
               </Link>
             </li>
             <li>
-              <Link to='/'>
+              <Link className='hover:text-yellow-800' to='/'>
                 <span>Fin-dom</span>
               </Link>
             </li>
             <li>
-              <Link to='/kinky-blog'>
+              <Link className='hover:text-yellow-800' to='/kinky-blog'>
                 <span>KinkyBlog</span>
               </Link>
             </li>
             <li>
-              <Link to='/tributes-to-the-queen'>
+              <Link className='hover:text-yellow-800' to='/tributes-to-the-queen'>
                 <span>Tribute</span>
               </Link>
             </li>
