@@ -7,7 +7,7 @@ function Navbar() {
   let navigate = useNavigate();
 
   const navigateToHome = () => {
-    navigate('/home', { replace: true });
+    navigate('/explore', { replace: true });
   };
 
   return (

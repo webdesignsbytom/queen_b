@@ -27,7 +27,6 @@ function FetishesPage() {
 
           <KinkyRain />
         </main>
-        FetishesPage
       </div>
     </div>
   );

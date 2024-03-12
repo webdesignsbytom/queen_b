@@ -29,19 +29,31 @@ function HomePage() {
         <header className='grid mt-4 2xl:mt-6 relative'>
           <section className='grid w-3/4 mx-auto'>
             <div>
-              <img src={BackgroundImage1} className='w-full h-full blur-sm' alt="Background" />
+              <img
+                src={BackgroundImage1}
+                className='w-full h-full blur-sm'
+                alt='Background'
+              />
             </div>
           </section>
 
           <section className='absolute top-1/2 transform left-24 -translate-y-1/2'>
             <div>
-              <img src={Logo} className='md:w-[300px] 2xl:w-[500px]' alt='Logo' />
+              <img
+                src={Logo}
+                className='md:w-[300px] 2xl:w-[500px]'
+                alt='Logo'
+              />
             </div>
           </section>
 
           <section className='absolute top-1/2 transform -right-10 2xl:right-10 -translate-x-1/2 -translate-y-1/2 h-full'>
             <div className='grid h-full'>
-              <img src={Queen1} className='object-cover w-full h-full' alt='The Queen' />
+              <img
+                src={Queen1}
+                className='object-cover w-full h-full'
+                alt='The Queen'
+              />
             </div>
           </section>
 
@@ -68,10 +80,8 @@ function HomePage() {
           <div className='mt-32 mb-10'>
             {/* Content */}
             <div className='grid w-[80%] mx-auto h-full'>
-              
               {/* Main desciption */}
               <section className='grid grid-cols-eight20 w-full h-full ml-10'>
-
                 {/* Text */}
                 <article className='text-white grid grid-rows-reg z-10'>
                   <div className='text-5xl gothic_font_1'>
@@ -147,12 +157,15 @@ function HomePage() {
                 </article>
 
                 {/* Image */}
-                <section className='grid  h-full md:-ml-[20rem] 2xl:-ml-20'>
+                <section className='grid h-full md:-ml-[20rem] 2xl:-ml-20'>
                   <div className='grid h-full '>
-                    <img src={Queen2} className='object-fill w-[80%] h-full' alt='The Queen' />
+                    <img
+                      src={Queen2}
+                      className='object-fill w-[80%] h-full'
+                      alt='The Queen'
+                    />
                   </div>
                 </section>
-
               </section>
 
               {/* Links CTA */}
@@ -161,13 +174,45 @@ function HomePage() {
               <section className='mt-20'>
                 <ImageArrayComponent displayNum={4} />
               </section>
-              {/* Secondary article - images */}
+
+              {/* Services */}
+              <section className='grid justify-center mt-32'>
+                <div>
+                  <h6 className='gothic_font_1 text-center text-4xl text-white'>
+                    SERVICES
+                  </h6>
+                </div>
+                <div className='text-white'>
+                  <ul>
+                    <li>
+                      Shopping Trips - Lingerie, tights, stockings, new outfits.
+                    </li>
+                    <li>
+                      Dressing and Sissy Training - Helping you dress like a
+                      true sissy, working from the bottom up to make a complete
+                      outfit, - from underwear, to outfit to heels, to hair and
+                      jewelry, and then of course the best way to walk, behave,
+                      move as an add on. This will also increase body confidence
+                      and posture over time.
+                    </li>
+                    <li>
+                      Make overs - Make up you really want to try or make up you
+                      really need help with.
+                    </li>
+                    <li>
+                      Beginner Boot Worship - I'll wear the boots, and you will
+                      clean them, suck them and make sure they are gleaming.
+                    </li>
+                    <li>
+                      Finacnial Domination - you know it brings you pleasure and
+                      you know you cant stop yourself! Be emersed and controlled
+                      by your queen and let her control your pitiful balance.
+                    </li>
+                  </ul>
+                </div>
+              </section>
             </div>
           </div>
-          {/* <div className='grid bg-red-400 w-2/3 mx-auto'>
-              main
-              <ImageArrayComponent />
-            </div> */}
         </main>
       </div>
     </div>

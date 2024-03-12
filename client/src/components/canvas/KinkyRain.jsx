@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import CuffsImage from '../../assets/cuffs.png';
+// Images
+import CuffsImage from '../../assets/images/animation/cuffs.png';
 
 function KinkyRain() {
   const canvasRef = useRef(null);

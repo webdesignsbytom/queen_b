@@ -30,3 +30,14 @@
 .gothic_font_3 {
     font-family: 'GothicFont3', sans-serif;
   }
+
+@font-face {
+  font-family: 'ClassyFont1';
+  src: url('../assets/fonts/vivalldi.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.classy_font_1 {
+    font-family: 'ClassyFont1', sans-serif;
+  }
