@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 // Components
 import Navbar from '../../components/nav/Navbar';
 // Blog data
 import { blogPostArray } from '../../utils/BlogPosts';
+import { ToggleContext } from '../../context/ToggleContext';
 
 function BlogPage() {
   const [blogPosts, setBlogPosts] = useState(blogPostArray);
+  const { setActiveNav } = useContext(ToggleContext);
+
+  useEffect(() => {
+    setActiveNav('/kinky-blog');
+  }, []);
 
   return (
     <div className='h-dvh w-full grid'>

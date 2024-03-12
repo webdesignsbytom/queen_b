@@ -12,12 +12,12 @@ function Navbar() {
 
   return (
     <nav className='grid text-yellow-600 border-b-2 border-purple-900 border-solid'>
-      <div className='grid grid-cols-reg p-1'>
+      <div className='grid grid-cols-reg pl-2 2xl:p-1'>
         
         {/* Logo */}
         <section className=''>
           <div onClick={navigateToHome}>
-            <img src={Logo2} alt='' className='h-20 2xl:h-24 w-20 2xl:w-24 cursor-pointer' />
+            <img src={Logo2} alt='' className='h-16 2xl:h-24 w-16 2xl:w-24 cursor-pointer' />
           </div>
         </section>
 

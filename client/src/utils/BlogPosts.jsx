@@ -8,7 +8,6 @@ export const blogPostArray = [
     content: `I have spoken about my hierarchy before briefly here, and this note is to highlight the kind of submissives and slaves that I require to grow that hierarchy.
 
         Everything needs a foundation, and nothing more so than a Queen's sharp heel keeping you in your place below me, so here are some options on how you can serve me to your best ability. I have provided you with some different choices on what you think would suit you the best in how you best serve me to get my attention and my time, which, as you can imagine, is very precious -
-        
         A regular boot cleaner/worshipper
         
         Line writing (to be marked and corrected by me) - In person and online.

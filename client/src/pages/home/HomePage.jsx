@@ -26,14 +26,14 @@ function HomePage() {
 
         {/* Main Content */}
         {/* Header */}
-        <header className='grid mt-2 2xl:mt-6 relative'>
+        <header className='grid mt-4 2xl:mt-6 relative'>
           <section className='grid w-3/4 mx-auto'>
             <div>
-              <img src={BackgroundImage1} className='w-full h-full blur-sm' />
+              <img src={BackgroundImage1} className='w-full h-full blur-sm' alt="Background" />
             </div>
           </section>
 
-          <section className='absolute top-1/2 transform left-32 -translate-y-1/2'>
+          <section className='absolute top-1/2 transform left-24 -translate-y-1/2'>
             <div>
               <img src={Logo} className='md:w-[300px] 2xl:w-[500px]' alt='Logo' />
             </div>
