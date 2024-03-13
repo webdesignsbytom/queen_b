@@ -12,6 +12,7 @@ import Queen10 from '../assets/images/queenB/queen3.png';
 import Queen11 from '../assets/images/queenB/queen4.png';
 import Queen12 from '../assets/images/queenB/queen5.png';
 import Queen13 from '../assets/images/queenB/queen6.png';
+import Queen14 from '../assets/images/queenB/queen7.png';
 
 export const galleryImagesArray = [
   Queen1,
@@ -27,4 +28,5 @@ export const galleryImagesArray = [
   Queen11,
   Queen12,
   Queen13,
+  Queen14,
 ];
