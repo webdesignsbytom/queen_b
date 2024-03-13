@@ -4,6 +4,8 @@ import Navbar from '../../components/nav/Navbar';
 // Blog data
 import { blogPostArray } from '../../utils/BlogPosts';
 import { ToggleContext } from '../../context/ToggleContext';
+// Images
+import WriterImage from '../../assets/images/general/writing_queen.jpg'
 
 function BlogPage() {
   const [blogPosts, setBlogPosts] = useState(blogPostArray);
@@ -21,11 +23,14 @@ function BlogPage() {
 
         {/* Main content */}
         <div className='grid w-1/2 mx-auto mt-8'>
-          <header className='outline outline-white outline-2 rounded-xl h-fit'>
+          <header className='h-fit'>
             <div className='text-center'>
-              <h1 className='text-xl text-yellow-600 font-bold gothic_font_1'>
+              <h1 className='text-4xl text-yellow-600 font-bold gothic_font_1'>
                 Blog of the goddess
               </h1>
+              <div className='grid w-full my-4'>
+                <img src={WriterImage} alt="Queens blog" className='w-full rounded-sm' />
+              </div>
             </div>
           </header>
 

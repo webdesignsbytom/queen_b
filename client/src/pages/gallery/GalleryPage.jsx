@@ -6,6 +6,7 @@ import Navbar from '../../components/nav/Navbar';
 // Images
 import { galleryImagesArray } from '../../utils/GalleryImages';
 import Logo from '../../assets/images/logos/logo2.png';
+import InternalLinkCta from '../../components/cta/InternalLinkCta';
 
 function GalleryPage() {
   const { setActiveNav } = useContext(ToggleContext);
@@ -16,7 +17,7 @@ function GalleryPage() {
   }, []);
 
   return (
-    <div className='h-dvh w-full '>
+    <div className='h-dvh w-full overflow-x-hidden'>
       <div className='grid grid-rows-reg bg-black h-full w-full'>
         {/* Navigation */}
         <Navbar />
@@ -44,13 +45,24 @@ function GalleryPage() {
                 return (
                   <div
                     key={index}
-                    className='grid w-[300px] h-[400px] outline outline-2 outline-purple-900 rounded p-2 overflow-hidden items-center justify-center'
+                    className='grid image_container bg-black w-[300px] h-[400px] p-2 overflow-hidden items-center justify-center'
                   >
                     <img src={image} alt='Queen Button' />
                   </div>
                 );
               })}
             </section>
+          </div>
+
+          <div className='mb-8 relative'>
+            <InternalLinkCta />
+            <div className='absolute -bottom-10 -right-10 -z-10 '>
+              <img
+                src={Logo}
+                className='md:w-[500px] 2xl:w-[700px] pr-2 '
+                alt='Logo'
+              />
+            </div>
           </div>
         </main>
       </div>

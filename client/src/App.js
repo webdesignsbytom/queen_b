@@ -8,6 +8,10 @@ import GalleryPage from './pages/gallery/GalleryPage';
 import FetishesPage from './pages/fetishes/FetishesPage';
 import TributePage from './pages/tribute/TributePage';
 import BlogPage from './pages/blog/BlogPage';
+import FinDomPage from './pages/findom/FinDomPage';
+import LoginPage from './pages/admin/LoginPage';
+import AdminPage from './pages/admin/AdminPage';
+import EditBlogPage from './pages/blog/EditBlogPage';
 
 function App() {
   return (
@@ -18,8 +22,10 @@ function App() {
       <Route path='/fetish-pleasure' element={<FetishesPage />} />
       <Route path='/tributes-to-the-queen' element={<TributePage />} />
       <Route path='/kinky-blog' element={<BlogPage />} />
-      <Route path='/test' element={<TestPage />} />
-      <Route path='/test2' element={<TestPage2 />} />
+      <Route path='/fin-dom-control' element={<FinDomPage />} />
+      <Route path='/login' element={<LoginPage />} />
+      <Route path='/admin' element={<AdminPage />} />
+      <Route path='/admin/edit-blog' element={<EditBlogPage />} />
     </Routes>
   );
 }

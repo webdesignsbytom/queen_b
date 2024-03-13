@@ -10,6 +10,7 @@ import BackgroundImage1 from '../../assets/images/general/bg1.jpg';
 import Queen1 from '../../assets/images/queenB/queen1_nb.png';
 import Queen2 from '../../assets/images/queenB/queen4_nb.png';
 import InternalLinkCta from '../../components/cta/InternalLinkCta';
+import ContactCta from '../../components/cta/ContactCta';
 
 function HomePage() {
   const { setActiveNav } = useContext(ToggleContext);
@@ -179,16 +180,16 @@ function HomePage() {
               <section className='grid justify-center mt-32'>
                 <div>
                   <h6 className='gothic_font_1 text-center text-4xl text-white'>
-                    SERVICES
+                  ❖ SERVICES ❖
                   </h6>
                 </div>
-                <div className='text-white'>
-                  <ul>
+                <div className='my-4'>
+                  <ul className='text-white grid gap-2'>
                     <li>
-                      Shopping Trips - Lingerie, tights, stockings, new outfits.
+                      <span className='font-semibold italic'>Shopping Trips -</span> Lingerie, tights, stockings, new outfits.
                     </li>
                     <li>
-                      Dressing and Sissy Training - Helping you dress like a
+                      <span className='font-semibold italic'>Dressing and Sissy Training -</span> Helping you dress like a
                       true sissy, working from the bottom up to make a complete
                       outfit, - from underwear, to outfit to heels, to hair and
                       jewelry, and then of course the best way to walk, behave,
@@ -196,19 +197,21 @@ function HomePage() {
                       and posture over time.
                     </li>
                     <li>
-                      Make overs - Make up you really want to try or make up you
+                      <span className='font-semibold italic'>Make overs -</span> Make up you really want to try or make up you
                       really need help with.
                     </li>
                     <li>
-                      Beginner Boot Worship - I'll wear the boots, and you will
+                      <span className='font-semibold italic'>Beginner Boot Worship -</span> I'll wear the boots, and you will
                       clean them, suck them and make sure they are gleaming.
                     </li>
                     <li>
-                      Finacnial Domination - you know it brings you pleasure and
+                      <span className='font-semibold italic'>Finacnial Domination -</span> you know it brings you pleasure and
                       you know you cant stop yourself! Be emersed and controlled
                       by your queen and let her control your pitiful balance.
                     </li>
                   </ul>
+
+                  <ContactCta />
                 </div>
               </section>
             </div>

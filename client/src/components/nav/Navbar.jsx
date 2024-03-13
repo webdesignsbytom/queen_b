@@ -45,7 +45,7 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link className='hover:text-yellow-800' to='/'>
+              <Link className='hover:text-yellow-800' to='/fin-dom-control'>
                 <span>Fin-dom</span>
               </Link>
             </li>
