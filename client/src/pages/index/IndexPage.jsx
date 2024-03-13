@@ -20,7 +20,7 @@ function IndexPage() {
         {/* Main Content */}
         <main className='grid relative h-full w-full justify-center items-center'>
           {/* Background images */}
-          <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 slow_fade_in_animation blur-sm'>
+          <div className='absolute top-5 md:top-1/2 left-1/2 transform -translate-x-1/2 md:-translate-y-1/2 slow_fade_in_animation md:blur-sm'>
             <img
               src={Logo}
               alt='Goddess logo'
@@ -36,7 +36,7 @@ function IndexPage() {
             />
           </div>
 
-          <div className='absolute top-1/2 -right-24 transform -translate-y-1/2 slow_fade_in_animation blur-sm'>
+          <div className='hidden md:grid absolute top-1/2 -right-24 transform -translate-y-1/2 slow_fade_in_animation blur-sm'>
             <img
               src={Queen2}
               alt='Goddess herself'
@@ -46,8 +46,8 @@ function IndexPage() {
 
 
           {/* Header - introduction */}
-          <header className='grid  overflow-hidden fade_in_animation'>
-            <article className='grid text-center pb-6 text-white'>
+          <header className='grid overflow-hidden fade_in_animation'>
+            <article className='grid text-center mt-2 md:mt-0 pb-6 text-white'>
               <section>
                 <div>
                   <h1 className='gothic_font_1 text-[98px]'>

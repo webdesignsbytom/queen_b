@@ -7,10 +7,11 @@ import TributeCta from '../../components/cta/TributeCta';
 import FinDomCta from '../../components/cta/FinDomCta';
 
 function TributePage() {
-  const { setActiveNav } = useContext(ToggleContext);
+  const { setActiveNav, closeNavBar } = useContext(ToggleContext);
 
   useEffect(() => {
     setActiveNav('/tributes-to-the-queen');
+    closeNavBar();
   }, []);
 
   return (
@@ -22,7 +23,7 @@ function TributePage() {
         {/* Main Content */}
         <main className='grid'>
           <div className='grid w-2/3 mx-auto justify-center'>
-            <article className='text-white mt-6'>
+            <article className='text-white mt-6 text-center'> 
               <div>
                 <h1 className='text-4xl gothic_font_1'>
                   For those who know how to treat a <strong>Queen</strong>

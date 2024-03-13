@@ -9,11 +9,12 @@ import Logo from '../../assets/images/logos/logo2.png';
 import InternalLinkCta from '../../components/cta/InternalLinkCta';
 
 function GalleryPage() {
-  const { setActiveNav } = useContext(ToggleContext);
+  const { setActiveNav, closeNavBar } = useContext(ToggleContext);
   const [galleryArray, setGalleryArray] = useState(galleryImagesArray);
 
   useEffect(() => {
     setActiveNav('/gallery-of-the-queen');
+    closeNavBar();
   }, []);
 
   return (
@@ -23,24 +24,24 @@ function GalleryPage() {
         <Navbar />
 
         <main className='grid'>
-          <div className='grid w-2/3 mx-auto mt-2 mb-6'>
-            <section className='grid grid-cols-3'>
-              <div className='grid text-white items-center justify-center text-4xl classy_font_1 mx-auto'>
+          <div className='grid md:w-2/3 mx-auto mt-2 mb-6'>
+            <section className='grid grid-cols-3 px-2 md:px-0'>
+              <div className='grid text-white items-center justify-center text-lg md:text-4xl classy_font_1 mx-auto'>
                 <span>BEAUTY</span>
               </div>
               <div className='grid justify-center'>
                 <img
                   src={Logo}
-                  className='md:w-[300px] 2xl:w-[500px] pr-2'
+                  className='w-[150px] md:w-[300px] 2xl:w-[500px] pl-2 md:pl-0 md:pr-2'
                   alt='Logo'
                 />
               </div>
-              <div className='grid text-white items-center justify-center text-4xl classy_font_1'>
+              <div className='grid text-white items-center justify-center text-lg md:text-4xl classy_font_1'>
                 <span>POWER</span>
               </div>
             </section>
 
-            <section className='grid grid-cols-3 -mt-4 gap-y-6 justify-between'>
+            <section className='grid md:grid-cols-3 mt-4 md:-mt-4 gap-y-6 justify-center md:justify-between'>
               {galleryArray.map((image, index) => {
                 return (
                   <div

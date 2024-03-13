@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 // Components
 import Navbar from '../../components/nav/Navbar';
 import ImageArrayComponent from '../../components/home/ImageArrayComponent';
+import KinkyRain from '../../components/canvas/KinkyRain';
 // Context
 import { ToggleContext } from '../../context/ToggleContext';
 // Images
@@ -13,32 +14,33 @@ import InternalLinkCta from '../../components/cta/InternalLinkCta';
 import ContactCta from '../../components/cta/ContactCta';
 
 function HomePage() {
-  const { setActiveNav } = useContext(ToggleContext);
+  const { setActiveNav, closeNavBar } = useContext(ToggleContext);
 
   useEffect(() => {
     setActiveNav('/explore');
+    closeNavBar();
   }, []);
 
   return (
-    <div className='h-dvh w-full '>
-      <div className='grid grid-rows-reg bg-black h-full w-full'>
+    <div className='h-dvh w-full'>
+      <div className='grid grid-rows-homefull md:grid-rows-reg bg-black h-full w-full'>
         {/* Navigation */}
         <Navbar />
 
         {/* Main Content */}
         {/* Header */}
-        <header className='grid mt-4 2xl:mt-6 relative'>
-          <section className='grid w-3/4 mx-auto'>
+        <header className='grid mt-4 2xl:mt-6 relative h-[600px] md:h-full'>
+          <section className='hidden md:grid w-full md:w-3/4 mx-auto'>
             <div>
               <img
                 src={BackgroundImage1}
-                className='w-full h-full blur-sm'
+                className='w-full h-fit md:h-full md:blur-sm'
                 alt='Background'
               />
             </div>
           </section>
 
-          <section className='absolute top-1/2 transform left-24 -translate-y-1/2'>
+          <section className='absolute top-1/4 md:top-1/2 transform left-1/2 md:left-24 -translate-x-1/2 md:-translate-x-0 -translate-y-1/2 z-20 md:z-0'>
             <div>
               <img
                 src={Logo}
@@ -58,10 +60,10 @@ function HomePage() {
             </div>
           </section>
 
-          <section className='absolute top-1/2 transform -translate-y-1/2 left-1/2 -translate-x-1/2'>
-            <div className='grid bg-[#00000070] px-4 rounded-lg py-2 text-center gothic_font_1'>
+          <section className='absolute w-full px-2 top-1/2 transform -translate-y-1/2 left-1/2 -translate-x-1/2'>
+            <div className='grid bg-[#00000070] px-1 md:px-4 rounded-lg py-2 text-center gothic_font_1'>
               <div>
-                <h1 className='text-yellow-600 text-6xl font-bold'>
+                <h1 className='text-yellow-600 text-4xl md:text-6xl font-bold'>
                   Call me Queen B <span className='italic'>or</span> Goddess
                 </h1>
               </div>
@@ -74,15 +76,26 @@ function HomePage() {
               </div>
             </div>
           </section>
+          <section className='md:hidden absolute w-full px-2 top-3/4 transform -translate-y-1/2 left-1/2 -translate-x-1/2'>
+            <div className='grid bg-[#00000070] px-1 md:px-4 rounded-lg py-2 text-center gothic_font_1'>
+              <h3 className='text-yellow-600 text-3xl font-semibold italic'>
+                Scroll to see more
+              </h3>
+            </div>
+          </section>
         </header>
 
         {/* Main */}
         <main className='grid bg-black'>
-          <div className='mt-32 mb-10'>
+            <div className='md:hidden h-[200px]'>
+              <KinkyRain />
+            </div>
+          <div className='mt-10 md:mt-32 mb-10'>
+            {/* Mobile only kinky banner */}
             {/* Content */}
-            <div className='grid w-[80%] mx-auto h-full'>
+            <div className='grid w-full md:w-[80%] mx-auto h-full'>
               {/* Main desciption */}
-              <section className='grid grid-cols-eight20 w-full h-full ml-10'>
+              <section className='grid md:grid-cols-eight20 w-full h-full ml-10'>
                 {/* Text */}
                 <article className='text-white grid grid-rows-reg z-10'>
                   <div className='text-5xl gothic_font_1'>
@@ -103,8 +116,8 @@ function HomePage() {
                       </p>
                     </div>
 
-                    <div className='grid text-3xl my-8 justify-center'>
-                      <div className='grid grid-flow-col mx-auto w-full gap-10'>
+                    <div className='grid md:text-3xl my-8 justify-center'>
+                      <div className='grid grid-flow-col mx-auto w-full gap-2 md:gap-10'>
                         <div>WHORES</div>
                         <div>&#10070; </div>
                         <div className='text-pink-400'>SISSIES</div>
@@ -130,8 +143,8 @@ function HomePage() {
                       </p>
                     </div>
 
-                    <div className='grid text-3xl my-8 justify-center'>
-                      <div className='grid grid-flow-col mx-auto w-full gap-10'>
+                    <div className='grid md:text-3xl my-8 justify-center'>
+                      <div className='grid grid-flow-col mx-auto w-full gap-2 md:gap-10'>
                         <div>PLEASURE</div>
                         <div>&#10070; </div>
                         <div className='text-red-600'>PAIN</div>
@@ -158,7 +171,7 @@ function HomePage() {
                 </article>
 
                 {/* Image */}
-                <section className='grid h-full md:-ml-[20rem] 2xl:-ml-20'>
+                <section className='hidden md:grid h-full md:-ml-[20rem] 2xl:-ml-20'>
                   <div className='grid h-full '>
                     <img
                       src={Queen2}
@@ -177,41 +190,53 @@ function HomePage() {
               </section>
 
               {/* Services */}
-              <section className='grid justify-center mt-32'>
+              <section className='grid justify-center mt-10 md:mt-32'>
                 <div>
                   <h6 className='gothic_font_1 text-center text-4xl text-white'>
-                  ❖ SERVICES ❖
+                    ❖ SERVICES ❖
                   </h6>
                 </div>
                 <div className='my-4'>
-                  <ul className='text-white grid gap-2'>
+                  <ul className='text-white grid gap-2 px-4 md:px-0'>
                     <li>
-                      <span className='font-semibold italic'>Shopping Trips -</span> Lingerie, tights, stockings, new outfits.
+                      <span className='font-semibold italic'>
+                        Shopping Trips -
+                      </span>{' '}
+                      Lingerie, tights, stockings, new outfits.
                     </li>
                     <li>
-                      <span className='font-semibold italic'>Dressing and Sissy Training -</span> Helping you dress like a
-                      true sissy, working from the bottom up to make a complete
-                      outfit, - from underwear, to outfit to heels, to hair and
-                      jewelry, and then of course the best way to walk, behave,
-                      move as an add on. This will also increase body confidence
-                      and posture over time.
+                      <span className='font-semibold italic'>
+                        Dressing and Sissy Training -
+                      </span>{' '}
+                      Helping you dress like a true sissy, working from the
+                      bottom up to make a complete outfit, - from underwear, to
+                      outfit to heels, to hair and jewelry, and then of course
+                      the best way to walk, behave, move as an add on. This will
+                      also increase body confidence and posture over time.
                     </li>
                     <li>
-                      <span className='font-semibold italic'>Make overs -</span> Make up you really want to try or make up you
-                      really need help with.
+                      <span className='font-semibold italic'>Make overs -</span>{' '}
+                      Make up you really want to try or make up you really need
+                      help with.
                     </li>
                     <li>
-                      <span className='font-semibold italic'>Beginner Boot Worship -</span> I'll wear the boots, and you will
-                      clean them, suck them and make sure they are gleaming.
+                      <span className='font-semibold italic'>
+                        Beginner Boot Worship -
+                      </span>{' '}
+                      I'll wear the boots, and you will clean them, suck them
+                      and make sure they are gleaming.
                     </li>
                     <li>
-                      <span className='font-semibold italic'>Finacnial Domination -</span> you know it brings you pleasure and
-                      you know you cant stop yourself! Be emersed and controlled
-                      by your queen and let her control your pitiful balance.
+                      <span className='font-semibold italic'>
+                        Finacnial Domination -
+                      </span>{' '}
+                      you know it brings you pleasure and you know you cant stop
+                      yourself! Be emersed and controlled by your queen and let
+                      her control your pitiful balance.
                     </li>
                   </ul>
 
-                  <ContactCta />
+                  <ContactCta /> 
                 </div>
               </section>
             </div>

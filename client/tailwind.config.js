@@ -54,7 +54,8 @@ module.exports = {
         '4x': '4fr 1fr',
         item: '50px 1fr',
         'ten-one': '10fr 1fr',
-        eight20: '4fr 1fr'
+        eight20: '4fr 1fr',
+        homefull: 'auto auto 1fr'
       },
       gridTemplateColumns: {
         reg: 'auto 1fr',

@@ -11,7 +11,7 @@ import LoadingSpinner from '../../components/utils/LoadingSpinner';
 
 function LoginPage() {
   const { setUser } = useContext(UserContext);
-  const { setActiveNav } = useContext(ToggleContext)
+  const { setActiveNav, closeNavBar } = useContext(ToggleContext);
 
   const [loginInProgress, setLoginInProgress] = useState(false);
   const [loginError, setLoginError] = useState(false);
@@ -24,8 +24,9 @@ function LoginPage() {
   let navigate = useNavigate();
 
   useEffect(() => {
-    setActiveNav('/login')
-  }, [])
+    setActiveNav('/login');
+    closeNavBar();
+  }, []);
 
   const homePage = () => {
     navigate('/admin-page', { replace: true });
@@ -34,22 +35,21 @@ function LoginPage() {
   const handleLogin = (event) => {
     event.preventDefault();
 
-    setLoginInProgress(true)
+    setLoginInProgress(true);
     client
       .post('/login', loginFormData, false)
       .then((res) => {
-
         localStorage.setItem(
           process.env.REACT_APP_USER_TOKEN,
           res.data.data.token
         );
-        setLoginInProgress(false)
+        setLoginInProgress(false);
         setUser(res.data.data.existingUser);
       })
       .then(() => homePage())
 
       .catch((err) => {
-        setLoginError(true)
+        setLoginError(true);
         console.error('Unable to login', err);
       });
   };
@@ -160,10 +160,11 @@ function LoginPage() {
                 </button>
                 {loginError && (
                   <div className='text-center'>
-                    <span className='text-red-700 font-semibold'>LOGIN FAILED</span>
+                    <span className='text-red-700 font-semibold'>
+                      LOGIN FAILED
+                    </span>
                   </div>
                 )}
-            
               </form>
             </div>
           </div>

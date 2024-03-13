@@ -11,6 +11,10 @@ const ToggleContextProvider = ({ children }) => {
     setToggleNavigation(!toggleNavigation);
   };
 
+  const closeNavBar = () => {
+    setToggleNavigation(false);
+  }
+
 
   return (
     <ToggleContext.Provider
@@ -19,6 +23,7 @@ const ToggleContextProvider = ({ children }) => {
         toggleNavbarOpenClosed,
         activeNav,
         setActiveNav,
+        closeNavBar
       }}
     >
       {children}

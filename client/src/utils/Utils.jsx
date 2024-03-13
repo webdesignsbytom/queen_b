@@ -3,4 +3,3 @@ export const loadingAnimationData = {
     status: 'Loading',
     message: ''
 }
-

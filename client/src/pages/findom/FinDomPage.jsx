@@ -4,10 +4,11 @@ import { ToggleContext } from '../../context/ToggleContext';
 import Navbar from '../../components/nav/Navbar';
 
 function FinDomPage() {
-  const { setActiveNav } = useContext(ToggleContext);
+  const { setActiveNav, closeNavBar } = useContext(ToggleContext);
 
   useEffect(() => {
     setActiveNav('/kinky-blog');
+    closeNavBar();
   }, []);
 
   return (

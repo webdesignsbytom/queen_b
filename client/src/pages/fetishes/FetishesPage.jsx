@@ -12,10 +12,11 @@ import Logo from '../../assets/images/logos/logo2.png';
 
 function FetishesPage() {
   const [fetishArray, setFetishArray] = useState(fetishOptionsArray);
-  const { setActiveNav } = useContext(ToggleContext);
+  const { setActiveNav, closeNavBar } = useContext(ToggleContext);
 
   useEffect(() => {
     setActiveNav('/fetish-pleasure');
+    closeNavBar();
   }, []);
 
   return (
@@ -38,7 +39,7 @@ function FetishesPage() {
           </section>
 
           <section className='grid mt-4 mb-10'>
-            <div className='grid gap-2 w-1/2 mx-auto'>
+            <div className='grid gap-2 px-4 md:px-0 md:w-1/2 mx-auto'>
               {fetishArray.map((fetish, index) => {
                 return (
                   <article key={index} className='text-white bg-'>
@@ -56,7 +57,8 @@ function FetishesPage() {
 
           <div className='mb-10 -mt-10 relative'>
             <InternalLinkCta />
-            <div className='absolute -bottom-10 -right-6'>
+
+            <div className='hidden md:grid absolute -bottom-10 -right-6'>
               <img
                 src={Logo}
                 className='md:w-[300px] 2xl:w-[500px] pr-2 '

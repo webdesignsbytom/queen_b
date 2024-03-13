@@ -5,14 +5,23 @@ import Navbar from '../../components/nav/Navbar';
 import { blogPostArray } from '../../utils/BlogPosts';
 import { ToggleContext } from '../../context/ToggleContext';
 // Images
-import WriterImage from '../../assets/images/general/writing_queen.jpg'
+import WriterImage from '../../assets/images/general/writing_queen.jpg';
+
+function formatDate(dateString) {
+  const date = new Date(dateString);
+  const day = date.getDate().toString().padStart(2, '0');
+  const month = (date.getMonth() + 1).toString().padStart(2, '0'); // getMonth() is zero-indexed
+  const year = date.getFullYear();
+  return `${day}/${month}/${year}`;
+}
 
 function BlogPage() {
   const [blogPosts, setBlogPosts] = useState(blogPostArray);
-  const { setActiveNav } = useContext(ToggleContext);
+  const { setActiveNav, closeNavBar } = useContext(ToggleContext);
 
   useEffect(() => {
     setActiveNav('/kinky-blog');
+    closeNavBar();
   }, []);
 
   return (
@@ -22,14 +31,18 @@ function BlogPage() {
         <Navbar />
 
         {/* Main content */}
-        <div className='grid w-1/2 mx-auto mt-8'>
+        <div className='grid md:w-1/2 px-4 md:px-0 mx-auto mt-8'>
           <header className='h-fit'>
             <div className='text-center'>
               <h1 className='text-4xl text-yellow-600 font-bold gothic_font_1'>
                 Blog of the goddess
               </h1>
               <div className='grid w-full my-4'>
-                <img src={WriterImage} alt="Queens blog" className='w-full rounded-sm' />
+                <img
+                  src={WriterImage}
+                  alt='Queens blog'
+                  className='w-full rounded-sm'
+                />
               </div>
             </div>
           </header>
@@ -37,8 +50,16 @@ function BlogPage() {
           {/* Main */}
 
           <main className='grid w-full h-full mt-4'>
+            <section className='grid grid-flow-col mb-2 justify-end'>
+              <label htmlFor='order_by' className='text-white pr-2'>
+                Order By
+              </label>
+              <select>
+                <option value='latest'>Latest</option>
+                <option value='oldest'>Oldest</option>
+              </select>
+            </section>
             <div className='grid grid-flow-row gap-6'>
-              
               {blogPosts.map((post, index) => {
                 return (
                   <article
@@ -47,15 +68,17 @@ function BlogPage() {
                   >
                     <div className='grid grid-flow-col justify-between border-b-2 border-solid border-white p-2'>
                       <div>
-                        <h4 className='text-xl'>{post.title}</h4>
+                        <h4 className='md:text-xl'>{post.title}</h4>
                       </div>
                       <div>
-                        <h5>{post.createdOn}</h5>
+                        <h5 className='text-sm'>
+                          {formatDate(post.createdOn)}
+                        </h5>
                       </div>
                     </div>
 
                     <div className='p-4'>
-                      <p>Posted: {post.content}</p>
+                      <p>{post.content}</p>
                     </div>
                   </article>
                 );
