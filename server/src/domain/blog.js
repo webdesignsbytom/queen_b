@@ -12,9 +12,16 @@ export const createNewArticle = (title, content, links) =>
     orderBy: {
       createdAt: 'desc',
     },
+    data: {
+      title: title,
+      content: content,
+      links: links,
+    },
+  });
+
+export const deleteArticle = (articleId) =>
+  dbClient.article.delete({
     where: {
-        title: title,
-        content: content,
-        links: links
-    }
+      id: articleId,
+    },
   });
