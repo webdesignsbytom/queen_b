@@ -4,10 +4,19 @@ import dbClient from '../src/utils/dbClient.js';
 async function seed() {
   const password = await bcrypt.hash('123', 8);
 
-  const testUser = await dbClient.user.create({
+  const devUser = await dbClient.user.create({
     data: {
       email: `xtombrock1989@gmail.com`,
       password,
+      role: 'DEVELOPER'
+    },
+  });
+  
+  const queenB = await dbClient.user.create({
+    data: {
+      email: `miss@gmail.com`,
+      password,
+      role: 'ADMIN'
     },
   });
 }
