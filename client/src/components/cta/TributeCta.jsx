@@ -17,18 +17,18 @@ function TributeCta() {
   return (
     <section className='grid gap-2 h-fit'>
       <div className='grid justify-center'>
-        <button onClick={loadAmazonWishList} className='amazon_button w-[300px] h-[80px] rounded-sm shadow-2xl hover:brightness-110'>
-          <span>Amazon Wishlist</span>
+        <button onClick={loadAmazonWishList} className='amazon_button w-[300px] h-[80px] rounded-sm shadow-2xl hover:brightness-110 hover:shadow-lg hover:shadow-purple-600'>
+          <span className='text-xl font-semibold'>Amazon Wishlist</span>
         </button>
       </div>
       <div className='grid justify-center'>
-        <button onClick={loadPayPal} className='paypal_button w-[300px] h-[80px] rounded-sm shadow-2xl hover:brightness-110'>
-          <span>PayPal</span>
+        <button onClick={loadPayPal} className='paypal_button w-[300px] h-[80px] rounded-sm shadow-2xl hover:brightness-110 hover:shadow-lg hover:shadow-purple-600'>
+          <span className='text-xl font-semibold'>PayPal</span>
         </button>
       </div>
       <div className='grid justify-center'>
-        <button onClick={loadCoinBase} className='coinbase_button w-[300px] h-[80px] rounded-sm shadow-2xl hover:brightness-110'>
-          <span>CoinBase</span>
+        <button onClick={loadCoinBase} className='coinbase_button w-[300px] h-[80px] rounded-sm shadow-2xl hover:brightness-110 hover:shadow-lg hover:shadow-purple-600'>
+          <span className='text-xl font-semibold'>CoinBase</span>
         </button>
       </div>
     </section>

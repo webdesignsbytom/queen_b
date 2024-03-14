@@ -61,10 +61,10 @@ function HomePage() {
             </div>
           </section>
 
-          <section className='absolute w-full px-2 top-1/2 transform -translate-y-1/2 left-1/2 -translate-x-1/2'>
+          <section className='absolute w-full md:w-fit px-2 top-1/2 transform -translate-y-1/2 left-1/2 -translate-x-1/2'>
             <div className='grid bg-[#00000070] px-1 md:px-4 rounded-lg py-2 text-center gothic_font_1'>
               <div>
-                <h1 className='text-yellow-600 text-4xl md:text-6xl font-bold'>
+                <h1 className='text-yellow-600 text-4xl md:text-7xl font-bold'>
                   Call me Queen B <span className='italic'>or</span> Goddess
                 </h1>
               </div>

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 // Images
 import Logo from '../../assets/images/logos/logo2.png';
@@ -10,11 +10,19 @@ import { ToggleContext } from '../../context/ToggleContext';
 function IndexPage() {
   const { setActiveNav, closeNavBar } = useContext(ToggleContext);
 
+  const [isHovering, setIsHovering] = useState(false)
   let navigate = useNavigate();
 
   const navigateToHomePage = () => {
     navigate('/explore', { replace: true });
   };
+
+  const hoverOver = () => {
+    setIsHovering(true)
+  }
+  const hoverLeave = () => {
+    setIsHovering(false)
+  }
 
   useEffect(() => {
     setActiveNav('/');
@@ -35,7 +43,7 @@ function IndexPage() {
             />
           </div>
 
-          <div className='absolute -left-24 slow_fade_in_animation h-full blur-sm'>
+          <div className='absolute -left-24 slow_fade_in_animation h-full blur-miss'>
             <img
               src={Queen1}
               alt='Goddess herself'
@@ -43,7 +51,7 @@ function IndexPage() {
             />
           </div>
 
-          <div className='hidden md:grid absolute top-1/2 -right-24 transform -translate-y-1/2 slow_fade_in_animation blur-sm'>
+          <div className='hidden md:grid absolute top-1/2 -right-24 transform -translate-y-1/2 slow_fade_in_animation blur-miss'>
             <img
               src={Queen2}
               alt='Goddess herself'
@@ -57,7 +65,7 @@ function IndexPage() {
             <article className='grid text-center mt-2 md:mt-0 pb-6 text-white'>
               <section>
                 <div>
-                  <h1 className='gothic_font_1 text-[98px]'>
+                  <h1 className='gothic_font_1 text-[122px] text-purple-900 text__stroke'>
                     <strong>QUEEN B</strong>
                   </h1>
                 </div>
@@ -72,13 +80,13 @@ function IndexPage() {
               <section className='text-xl grid gap-2'>
                 <div>
                   <h3>
-                    A lustful and sensuously kinky Goddess who's very presence
-                    commands your devotion.
+                    A lustful and sensuously kinky <strong className='text-red-700'>Goddess</strong> who's very presence
+                    commands your devotion!
                   </h3>
                 </div>
                 <div>
                   <h4>
-                    Kneel, worship and delight in sinful pleasure with Queen B,
+                    Kneel, worship and <span className='italic'>delight</span> in sinful pleasure with <strong className='text-yellow-600'>Queen B</strong>,
                     remember her rules and remember your manours.
                   </h4>
                 </div>
@@ -95,9 +103,15 @@ function IndexPage() {
               <div className='grid justify-center py-2'>
                 <button
                   onClick={navigateToHomePage}
-                  className='metal_btn metal_btn_style'
+                  onMouseEnter={hoverOver}
+                  onMouseLeave={hoverLeave}
+                  className='metal_btn metal_btn_style w-[300px]'
                 >
-                  Enter Now
+                  {isHovering ? (
+                    <span>SLAVE</span>
+                  ) : (
+                    <span>Enter Now</span>
+                  )}
                 </button>
               </div>
             </section>
