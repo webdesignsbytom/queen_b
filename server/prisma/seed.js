@@ -8,11 +8,6 @@ async function seed() {
     data: {
       email: `xtombrock1989@gmail.com`,
       password,
-      profile: {
-        create: {
-          username: `xtombrock`,
-        },
-      },
     },
   });
 }

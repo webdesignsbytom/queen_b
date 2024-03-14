@@ -1,6 +1,4 @@
-import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
-import dbClient from '../utils/dbClient.js';
 // Components
 import { createVerificationInDB, createPasswordResetInDB } from './utils.js';
 // Emitters
@@ -10,16 +8,9 @@ import {
   findAllUsers,
   findUserByEmail,
   createUser,
-  findVerification,
-  findResetRequest,
   findUserById,
-  resetUserPassword,
   deleteUserById,
-  findUsersByRole,
-  createNewsletterMembershipForNewMember,
   findUserByUsername,
-  findUserLoginRecord,
-  updateUserLoginRecordToCollectedReward,
 } from '../domain/users.js';
 import { createAccessToken } from '../utils/tokens.js';
 import {
@@ -43,19 +34,9 @@ import {
 } from '../event/utils/errorUtils.js';
 // Time
 import { v4 as uuid } from 'uuid';
-import { findAllUserCardInstances, findCardById, setCardFromPackToUser } from '../domain/cards.js';
-import { deletePackbyIdWhenOpened, findAllPacksForUser, findPackById } from '../domain/packs.js';
-import { createBankForUser } from '../domain/bank.js';
-import { freeSingleRandomCard } from './cards.js';
 // Password hash
 const hashRate = 8;
 
-// export const sendTestyEmail = async (req, res) => {
-//   console.log('testin');
-//   const { email } = req.params;
-//   console.log('email', email);
-//   await testEmail(email);
-// };
 
 export const getAllUsers = async (req, res) => {
   console.log('getAllUsers');

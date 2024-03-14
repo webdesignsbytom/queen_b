@@ -31,28 +31,6 @@ export const login = async (req, res) => {
       })
     }
 
-    let lastLoginTime = foundUser.loginRecord.lastLoginDateTime
-    console.log('last login time', lastLoginTime);
-
-    let oneDayLater = new Date(lastLoginTime.getTime() + 1)
-    console.log('one day later', oneDayLater)
-
-    // let twoDaysLater = new Date(lastLoginTime.getTime() + 172800000)
-    let twoDaysLater = new Date(lastLoginTime.getTime() + 172800000)
-    console.log('twoDaysLater', twoDaysLater)
-    ;
-    let newLoginTime = new Date()
-    console.log('newLoginTime', newLoginTime);
-
-    // rewards
-    if (newLoginTime > oneDayLater && newLoginTime < twoDaysLater) {
-      const updatedRecord = await updateUserLoginRecordToRewardAvailable(foundUser.loginRecord.id, newLoginTime)
-    }
-
-    if (newLoginTime > twoDaysLater) {
-      const updatedRecord = await resetUserLoginRecord(foundUser.loginRecord.id, newLoginTime);
-    }
-
     delete foundUser.password
     const token = createAccessToken(foundUser.id, foundUser.email)
 
