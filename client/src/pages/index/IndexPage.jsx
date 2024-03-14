@@ -1,18 +1,25 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-// Components
-import KinkyRain from '../../components/canvas/KinkyRain';
 // Images
 import Logo from '../../assets/images/logos/logo2.png';
 import Queen1 from '../../assets/images/queenB/queen1_nb.png';
 import Queen2 from '../../assets/images/queenB/queen6_nb.png';
+// Context
+import { ToggleContext } from '../../context/ToggleContext';
 
 function IndexPage() {
+  const { setActiveNav, closeNavBar } = useContext(ToggleContext);
+
   let navigate = useNavigate();
 
   const navigateToHomePage = () => {
     navigate('/explore', { replace: true });
   };
+
+  useEffect(() => {
+    setActiveNav('/');
+    closeNavBar();
+  }, []);
 
   return (
     <div className='grid h-dvh w-full overflow-hidden'>

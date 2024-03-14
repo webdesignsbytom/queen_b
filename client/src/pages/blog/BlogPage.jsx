@@ -6,6 +6,7 @@ import { blogPostArray } from '../../utils/BlogPosts';
 import { ToggleContext } from '../../context/ToggleContext';
 // Images
 import WriterImage from '../../assets/images/general/writing_queen.jpg';
+import Logo from '../../assets/images/logos/logo2.png';
 
 function formatDate(dateString) {
   const date = new Date(dateString);
@@ -37,12 +38,21 @@ function BlogPage() {
               <h1 className='text-4xl text-yellow-600 font-bold gothic_font_1'>
                 Blog of the goddess
               </h1>
-              <div className='grid w-full my-4'>
+              <div className='grid relative w-full my-4'>
                 <img
                   src={WriterImage}
                   alt='Queens blog'
                   className='w-full rounded-sm'
                 />
+                <section className='absolute top-1/2 transform left-1/2 -translate-x-1/2 -translate-y-1/2 z-20'>
+                  <div>
+                    <img
+                      src={Logo}
+                      className='md:w-[50px] lg:w-[200px] 2xl:w-[300px]'
+                      alt='Logo'
+                    />
+                  </div>
+                </section>
               </div>
             </div>
           </header>
@@ -50,11 +60,14 @@ function BlogPage() {
           {/* Main */}
 
           <main className='grid w-full h-full mt-4'>
-            <section className='grid grid-flow-col mb-2 justify-end'>
-              <label htmlFor='order_by' className='text-white pr-2'>
-                Order By
+            <section className='grid grid-flow-col mb-2 justify-end items-center'>
+              <label
+                htmlFor='order_by'
+                className='text-white pr-2 font-semibold'
+              >
+                Order By:
               </label>
-              <select>
+              <select className='outline outline-purple-900 outline-2 rounded-sm px-2'>
                 <option value='latest'>Latest</option>
                 <option value='oldest'>Oldest</option>
               </select>

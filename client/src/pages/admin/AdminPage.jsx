@@ -1,4 +1,5 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect } from 'react';
+// Context
 import { ToggleContext } from '../../context/ToggleContext';
 
 function AdminPage() {
@@ -8,9 +9,17 @@ function AdminPage() {
     setActiveNav('/admin');
     closeNavBar();
   }, []);
+
   return (
-    <div>AdminPage</div>
-  )
+    <div className='grid h-dvh w-full overflow-hidden'>
+      <div className='grid bg-black overflow-hidden'>
+        {/* Main Content */}
+        <main className='grid relative h-full w-full justify-center items-center'>
+          <p className='text-white'>ADMIIN</p>
+        </main>
+      </div>
+    </div>
+  );
 }
 
-export default AdminPage
+export default AdminPage;

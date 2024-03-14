@@ -4,12 +4,15 @@ import { Link, useNavigate } from 'react-router-dom';
 import Logo2 from '../../assets/images/logos/logo1.png';
 // Context
 import { ToggleContext } from '../../context/ToggleContext';
+import { UserContext } from '../../context/UserContext';
 
 function Navbar() {
-  const { toggleNavbarOpenClosed, toggleNavigation, activeNav, setActiveNav } =
+  const { toggleNavbarOpenClosed, toggleNavigation } =
     useContext(ToggleContext);
+  const { user } = useContext(UserContext);
 
   let navigate = useNavigate();
+
   const navigateToHome = () => {
     navigate('/explore', { replace: true });
   };
@@ -61,6 +64,14 @@ function Navbar() {
                 <span>Tribute</span>
               </Link>
             </li>
+            {user.email &&
+              (user.role === 'ADMIN' || user.role === 'DEVELOPER') && (
+                <li>
+                  <Link className='hover:text-yellow-800' to='/admin'>
+                    <span>Admin</span>
+                  </Link>
+                </li>
+              )}
           </ul>
         </section>
       )}
@@ -147,6 +158,14 @@ function Navbar() {
                 <span>Tribute</span>
               </Link>
             </li>
+            {user.email &&
+              (user.role === 'ADMIN' || user.role === 'DEVELOPER') && (
+                <li>
+                  <Link className='hover:text-yellow-800' to='/admin'>
+                    <span>Admin</span>
+                  </Link>
+                </li>
+              )}
           </ul>
         </section>
       </div>

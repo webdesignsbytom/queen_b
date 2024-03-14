@@ -10,6 +10,7 @@ import Logo from '../../assets/images/logos/logo2.png';
 import BackgroundImage1 from '../../assets/images/general/bg1.jpg';
 import Queen1 from '../../assets/images/queenB/queen1_nb.png';
 import Queen2 from '../../assets/images/queenB/queen4_nb.png';
+// Components
 import InternalLinkCta from '../../components/cta/InternalLinkCta';
 import ContactCta from '../../components/cta/ContactCta';
 
@@ -22,8 +23,8 @@ function HomePage() {
   }, []);
 
   return (
-    <div className='h-dvh w-full'>
-      <div className='grid grid-rows-homefull md:grid-rows-reg bg-black h-full w-full'>
+    <div className='h-dvh w-full overflow-x-hidden'>
+      <div className='grid grid-rows-homefull md:grid-rows-reg bg-black h-full w-full overflow-x-hidden'>
         {/* Navigation */}
         <Navbar />
 
