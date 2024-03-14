@@ -32,12 +32,19 @@ function BlogPage() {
         <Navbar />
 
         {/* Main content */}
-        <div className='grid md:w-1/2 px-4 md:px-0 mx-auto mt-8'>
+        <div className='grid md:w-1/2 px-4 md:px-0 mx-auto mt-8 mb-4'>
           <header className='h-fit'>
             <div className='text-center'>
-              <h1 className='text-4xl text-yellow-600 font-bold gothic_font_1'>
-                Blog of the goddess
-              </h1>
+              <div>
+                <h1 className='text-4xl text-yellow-600 font-bold gothic_font_1'>
+                  Blog of the goddess
+                </h1>
+              </div>
+              <div>
+                <h2>
+                  See inside the twisted mind of this <strong>Goddess!</strong>
+                </h2>
+              </div>
               <div className='grid relative w-full my-4'>
                 <img
                   src={WriterImage}
@@ -72,7 +79,7 @@ function BlogPage() {
                 <option value='oldest'>Oldest</option>
               </select>
             </section>
-            <div className='grid grid-flow-row gap-6'>
+            <div className='grid grid-flow-row gap-6 mb-6'>
               {blogPosts.map((post, index) => {
                 return (
                   <article

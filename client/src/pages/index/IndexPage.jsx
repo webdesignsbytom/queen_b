@@ -105,35 +105,17 @@ function IndexPage() {
                   onClick={navigateToHomePage}
                   onMouseEnter={hoverOver}
                   onMouseLeave={hoverLeave}
-                  className='metal_btn metal_btn_style w-[300px]'
+                  className='metal_btn metal_btn_style w-[300px] text-white'
                 >
                   {isHovering ? (
-                    <span>SLAVE</span>
+                    <span>SUBMIT</span>
                   ) : (
-                    <span>Enter Now</span>
+                    <span>ENTER NOW</span>
                   )}
                 </button>
               </div>
             </section>
-          </header>
-
-          {/* Animation */}
-          {/* <section className='grid grid-rows-reg h-full overflow-hidden'>
-            <article className='grid w-fit mx-auto mt-4 overflow-hidden'>
-              <div className='text-white'>
-                <p>
-                  Her pleasure is <span className='italic'>your</span> pleasure!
-                  See what Queen B has instore!
-                </p>
-              </div>
-            </article>
-
-            <section className='grid overflow-hidden'>
-              <div className='relative overflow-hidden'>
-                <KinkyRain />
-              </div>
-            </section>
-          </section> */}
+          </header>w
         </main>
       </div>
     </div>
