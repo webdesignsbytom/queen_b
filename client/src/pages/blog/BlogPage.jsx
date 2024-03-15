@@ -7,6 +7,7 @@ import { ToggleContext } from '../../context/ToggleContext';
 // Images
 import WriterImage from '../../assets/images/general/writing_queen.jpg';
 import Logo from '../../assets/images/logos/logo2.png';
+import client from '../../api/client';
 
 function formatDate(dateString) {
   const date = new Date(dateString);
@@ -23,6 +24,17 @@ function BlogPage() {
   useEffect(() => {
     setActiveNav('/kinky-blog');
     closeNavBar();
+
+    client
+      .get(`/blog/get-all-blog-articles`)
+      .then((res) => {
+        setBlogPosts(res.data.data.articles);
+        console.log('ZZZZzz');
+        console.log('XX', res.data.data.articles);
+      })
+      .catch((err) => {
+        console.error('Unable to retrieve user data', err);
+      });
   }, []);
 
   return (

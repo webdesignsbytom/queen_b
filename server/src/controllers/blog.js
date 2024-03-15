@@ -40,7 +40,6 @@ export const getAllBlogArticles = async (req, res) => {
 export const createNewBlogArticle = async (req, res) => {
   console.log('createNewBlogArticle');
   const { title, content, links } = req.body;
-  console.log('xxx', title, content, links);
 
   try {
     if (!title || !content) {
@@ -54,7 +53,6 @@ export const createNewBlogArticle = async (req, res) => {
     }
 
     const createdArticle = await createNewArticle(title, content, links);
-    console.log('created article', createdArticle);
 
     if (!createdArticle) {
       const notCreated = new BadRequestEvent(
