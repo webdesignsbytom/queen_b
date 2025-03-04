@@ -12,6 +12,7 @@ import FinDomPage from './pages/findom/FinDomPage';
 import LoginPage from './pages/admin/LoginPage';
 import AdminPage from './pages/admin/AdminPage';
 import EditBlogPage from './pages/blog/EditBlogPage';
+import ContactPage from './pages/contact/ContactPage';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route path='/explore' element={<HomePage />} />
       <Route path='/gallery-of-the-queen' element={<GalleryPage />} />
       <Route path='/fetish-pleasure' element={<FetishesPage />} />
+      <Route path='/contact' element={<ContactPage />} />
       <Route path='/tributes-to-the-queen' element={<TributePage />} />
       <Route path='/kinky-blog' element={<BlogPage />} />
       <Route path='/fin-dom-control' element={<FinDomPage />} />
