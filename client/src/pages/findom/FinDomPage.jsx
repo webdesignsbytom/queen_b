@@ -22,13 +22,13 @@ function FinDomPage() {
         {/* Navigation */}
         <Navbar />
         <header className='mt-10 lg:mt-16 mb-8 px-6'>
-          <h1 className='text-center text-yellow-400 text-4xl'>
+          <h1 className='text-center text-yellow-600 text-4xl gothic_font_1'>
             Financial Domination <br /> With Queen B{' '}
           </h1>
         </header>
         {/* FinDom Section */}
-        <main className='px-6 grid gap-10 lg:w-[60%] lg:mx-auto lg:mt-12'>
-          <section className='grid lg:grid-cols-rev'>
+        <main className='px-6 grid gap-20 lg:w-[60%] lg:mx-auto lg:mt-12'>
+          <section className='grid lg:grid-cols-rev gap-6'>
             <section className='lg:order-last'>
               <img
                 src={FinDomImage}
@@ -37,7 +37,7 @@ function FinDomPage() {
               />
             </section>
             <section className='px-4 mt-8'>
-              <h2 className='text-2xl text-yellow-400 text-center lg:text-left mb-2'>
+              <h2 className='text-2xl gothic_font_1 text-yellow-600 text-center lg:text-left mb-2'>
                 What is FinDom?
               </h2>
               <p className='text-white'>
@@ -61,16 +61,16 @@ function FinDomPage() {
           </section>
 
           {/* Key Holding Section */}
-          <section className='grid lg:grid-cols-rev'>
+          <section className='grid lg:grid-cols-reg gap-6'>
             <section className='grid'>
               <img
                 src={KeyImage}
                 alt='Queen B'
-                className='h-full lg:max-h-[60vh] rounded-md shadow-lg shadow-white/40'
+                className='h-full w-full min-h-12 lg:max-h-[60vh] rounded-md shadow-lg shadow-white/40'
               />
             </section>
             <section className='p-4'>
-              <h2 className='text-2xl text-yellow-400 text-center lg:text-left mb-2'>
+              <h2 className='text-2xl gothic_font_1 text-yellow-600 text-center lg:text-left mb-2'>
                 Key Holding
               </h2>
               <p className='text-white'>
@@ -93,8 +93,8 @@ function FinDomPage() {
           </section>
 
           {/* Additional Section Example: */}
-          <section className='grid lg:grid-cols-rev'>
-            <section className='grid'>
+          <section className='grid lg:grid-cols-rev gap-6'>
+            <section className='grid lg:order-last'>
               <img
                 src={PsychImage}
                 alt='Queen B'
@@ -102,7 +102,7 @@ function FinDomPage() {
               />
             </section>
             <section className='p-4'>
-              <h2 className='text-2xl text-yellow-400 text-center lg:text-left mb-2'>
+              <h2 className='text-2xl gothic_font_1 text-yellow-600 text-center lg:text-left mb-2'>
                 The Psychological Impact
               </h2>
               <p className='text-white'>
@@ -118,7 +118,7 @@ function FinDomPage() {
 
           {/* Payment Links Section */}
           <section className='p-4'>
-            <h2 className='text-2xl text-white mb-2'>Support My Journey</h2>
+            <h2 className='text-2xl text-yellow-600 mb-2 gothic_font_1'>Support My Journey</h2>
             <p className='text-white mb-4'>
               If you'd like to show your appreciation, you can support me
               through the following links. Your contributions help me continue
@@ -130,7 +130,7 @@ function FinDomPage() {
                 <li key={index} className='mb-4'>
                   <a
                     href={link.link}
-                    className='text-yellow-400 underline'
+                    className='text-yellow-600 underline'
                     target='_blank'
                     rel='noopener noreferrer'
                   >

@@ -14,7 +14,7 @@ function GalleryItem({ item }) {
         />
       </div>
       <aside className='text-center'>
-        <span className="text-yellow-400 text-center font-semibold">{item.name}</span>
+        <span className="text-yellow-600 text-center font-semibold">{item.name}</span>
       </aside>
     </div>
   );
