@@ -1,9 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 // Pages
-import TestPage from './pages/test/TestPage';
 import HomePage from './pages/home/HomePage';
 import IndexPage from './pages/index/IndexPage';
-import TestPage2 from './pages/test/TestPage2';
 import GalleryPage from './pages/gallery/GalleryPage';
 import FetishesPage from './pages/fetishes/FetishesPage';
 import TributePage from './pages/tribute/TributePage';

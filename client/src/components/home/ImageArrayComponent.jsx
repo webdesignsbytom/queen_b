@@ -9,7 +9,7 @@ import Queen4 from '../../assets/images/queenB/queen4_nb.png';
 function ImageArrayComponent({ displayNum }) {
   const [isTextVisible, setIsTextVisible] = useState(false);
 
-  const [galleryImageArray, setGalleryImageArray] = useState([
+  const [galleryImageArray] = useState([
     {
       image: Queen1,
       tag: 'SIN',
@@ -34,13 +34,13 @@ function ImageArrayComponent({ displayNum }) {
 
   return (
     <section className='grid'>
-      <div className='grid grid-cols-2 md:grid-cols-none px-8 md:px-0 gap-y-2 md:grid-flow-col'>
+      <div className='grid grid-cols-2 md:grid-cols-none px-8 md:px-0 gap-y-6 md:grid-flow-col'>
         {/* Image data */}
         {galleryImageArray.slice(0, displayNum).map((image, index) => (
           <div key={index} className='grid justify-center'>
             <div
               onMouseOver={displayHiddenText}
-              className='relative outline outline-purple-900 outline-2 rounded-lg p-1 w-[100px] h-[150px] md:w-[200px] md:h-[300px] cursor-pointer shadow-[0_20px_50px_rgba(76,_29,_149,_0.7)] transition duration-1000 ease-in-out hover:bg-white overflow-hidden'
+              className='relative outline outline-purple-900 outline-2 rounded-lg p-1 cursor-pointer shadow-[0_20px_50px_rgba(76,_29,_149,_0.7)] transition duration-1000 ease-in-out hover:bg-white overflow-hidden'
             >
               <img
                 src={image.image}

@@ -10,7 +10,7 @@ import { ToggleContext } from '../../context/ToggleContext';
 function IndexPage() {
   const { setActiveNav, closeNavBar } = useContext(ToggleContext);
 
-  const [isHovering, setIsHovering] = useState(false)
+  const [isHovering, setIsHovering] = useState(false);
   let navigate = useNavigate();
 
   const navigateToHomePage = () => {
@@ -18,11 +18,11 @@ function IndexPage() {
   };
 
   const hoverOver = () => {
-    setIsHovering(true)
-  }
+    setIsHovering(true);
+  };
   const hoverLeave = () => {
-    setIsHovering(false)
-  }
+    setIsHovering(false);
+  };
 
   useEffect(() => {
     setActiveNav('/');
@@ -59,40 +59,43 @@ function IndexPage() {
             />
           </div>
 
-
           {/* Header - introduction */}
-          <header className='grid overflow-hidden fade_in_animation'>
-            <article className='grid text-center mt-2 md:mt-0 pb-6 text-white'>
+          <header className='grid overflow-hidden fade_in_animation lg:bg-purple-700/15 px-4 md:px-6 lg:px-12 pb-8'>
+            <article className='grid text-center mt-20 md:mt-0 pb-6 text-white'>
               <section>
                 <div>
-                  <h1 className='gothic_font_1 text-[122px] text-purple-900 text__stroke'>
+                  <h1 className='gothic_font_1 text-[88px] lg:text-[122px] text-purple-900 text__stroke'>
                     <strong>QUEEN B</strong>
                   </h1>
                 </div>
-                <div>
-                  <h2 className='text-xl'>
+                <div className='px-4'>
+                  <h2 className='text-xl font-semibold'>
                     The beautiful and divine Queen B welcomes
                     <span className='italic'> you!</span>
                   </h2>
                 </div>
               </section>
 
-              <section className='text-xl grid gap-2'>
+              <section className='text-base grid gap-2 px-4 mt-4'>
                 <div>
-                  <h3>
-                    A lustful and sensuously kinky <strong className='text-red-700'>Goddess</strong> who's very presence
-                    commands your devotion!
+                  <h3 >
+                    A lustful and sensuously kinky{' '}
+                    <strong className='text-red-700'><em>Goddess</em></strong> who's very
+                    presence commands your devotion!
                   </h3>
                 </div>
                 <div>
                   <h4>
-                    Kneel, worship and <span className='italic'>delight</span> in sinful pleasure with <strong className='text-yellow-600'>Queen B</strong>,
+                    Kneel, worship and <em>delight</em>{' '}
+                    in sinful pleasure with{' '}
+                    <strong className='text-yellow-600'>Queen B</strong>,
                     remember her rules and remember your manours.
                   </h4>
                 </div>
                 <div>
                   <h5>
-                    Offering the strictest service with the <span className='italic'>highest</span> pleasure.
+                    Offering the strictest service with the{' '}
+                    <em>highest</em> pleasure.
                   </h5>
                 </div>
               </section>
@@ -107,15 +110,11 @@ function IndexPage() {
                   onMouseLeave={hoverLeave}
                   className='metal_btn metal_btn_style w-[300px] text-white'
                 >
-                  {isHovering ? (
-                    <span>SUBMIT</span>
-                  ) : (
-                    <span>ENTER NOW</span>
-                  )}
+                  {isHovering ? <span>SUBMIT</span> : <span>ENTER NOW</span>}
                 </button>
               </div>
             </section>
-          </header>w
+          </header>
         </main>
       </div>
     </div>

@@ -11,7 +11,7 @@ import InternalLinkCta from '../../components/cta/InternalLinkCta';
 import Logo from '../../assets/images/logos/logo2.png';
 
 function FetishesPage() {
-  const [fetishArray, setFetishArray] = useState(fetishOptionsArray);
+  const [fetishArray] = useState(fetishOptionsArray);
   const { setActiveNav, closeNavBar } = useContext(ToggleContext);
 
   useEffect(() => {

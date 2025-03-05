@@ -15,18 +15,18 @@ import Queen13 from '../assets/images/queenB/queen6.png';
 import Queen14 from '../assets/images/queenB/queen7.png';
 
 export const galleryImagesArray = [
-  Queen1,
-  Queen2,
-  Queen3,
-  Queen4,
-  Queen5,
-  Queen6,
-  Queen7,
-  Queen8,
-  Queen9,
-  Queen10,
-  Queen11,
-  Queen12,
-  Queen13,
-  Queen14,
+  { img: Queen1, name: 'The Regal Enchantress', borderColor: '#ca8a04' }, // Yellow-600
+  { img: Queen2, name: 'Mistress of Desire', borderColor: '#ffffff' }, // White
+  { img: Queen3, name: 'The Tempting Siren', borderColor: '#4C1D95' }, // Purple-900
+  { img: Queen4, name: 'Goddess of All Pleasures', borderColor: '#4C1D95' }, // Purple-900
+  { img: Queen5, name: 'Dominant Beauty', borderColor: '#ca8a04' }, // Yellow-600
+  { img: Queen6, name: 'Seductress Supreme', borderColor: '#ffffff' }, // White
+  { img: Queen7, name: 'The Sensual Queen', borderColor: '#ffffff' }, // White
+  { img: Queen8, name: 'Enchantress of the Night', borderColor: '#4C1D95' }, // Purple-900
+  { img: Queen9, name: 'The Tempting Siren', borderColor: '#ca8a04' }, // Yellow-600
+  { img: Queen10, name: 'Mistress of Desire', borderColor: '#ca8a04' }, // Yellow-600
+  { img: Queen11, name: 'The Alluring Goddess', borderColor: '#ffffff' }, // White
+  { img: Queen12, name: 'Queen of Indulgence', borderColor: '#4C1D95' }, // Purple-900
+  { img: Queen13, name: 'Seductive Majesty', borderColor: '#4C1D95' }, // Purple-900
+  { img: Queen14, name: 'The Dominant Diva', borderColor: '#ca8a04' }, // Yellow-600
 ];

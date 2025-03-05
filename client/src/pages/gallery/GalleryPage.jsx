@@ -7,10 +7,11 @@ import Navbar from '../../components/nav/Navbar';
 import { galleryImagesArray } from '../../utils/GalleryImages';
 import Logo from '../../assets/images/logos/logo2.png';
 import InternalLinkCta from '../../components/cta/InternalLinkCta';
+import GalleryItem from '../../components/gallery/GalleryItem';
 
 function GalleryPage() {
   const { setActiveNav, closeNavBar } = useContext(ToggleContext);
-  const [galleryArray, setGalleryArray] = useState(galleryImagesArray);
+  const [galleryArray] = useState(galleryImagesArray);
 
   useEffect(() => {
     setActiveNav('/gallery-of-the-queen');
@@ -41,16 +42,9 @@ function GalleryPage() {
               </div>
             </section>
 
-            <section className='grid md:grid-cols-3 mt-4 md:-mt-4 gap-y-6 justify-center md:justify-between'>
+            <section className='grid md:grid-cols-3 mt-4 md:-mt-4 lg:mt-10 gap-y-6 lg:gap-y-10 justify-center md:justify-between px-2'>
               {galleryArray.map((image, index) => {
-                return (
-                  <div
-                    key={index}
-                    className='grid image_container bg-black w-[300px] h-[400px] p-2 overflow-hidden items-center justify-center'
-                  >
-                    <img src={image} alt='Queen Button' />
-                  </div>
-                );
+                return <GalleryItem key={index} item={image} />;
               })}
             </section>
           </div>

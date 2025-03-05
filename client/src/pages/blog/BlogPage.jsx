@@ -8,14 +8,7 @@ import { ToggleContext } from '../../context/ToggleContext';
 import WriterImage from '../../assets/images/general/writing_queen.jpg';
 import Logo from '../../assets/images/logos/logo2.png';
 import client from '../../api/client';
-
-function formatDate(dateString) {
-  const date = new Date(dateString);
-  const day = date.getDate().toString().padStart(2, '0');
-  const month = (date.getMonth() + 1).toString().padStart(2, '0'); // getMonth() is zero-indexed
-  const year = date.getFullYear();
-  return `${day}/${month}/${year}`;
-}
+import BlogItem from '../../components/blog/BlogItem';
 
 function BlogPage() {
   const [blogPosts, setBlogPosts] = useState(blogPostArray);
@@ -94,25 +87,7 @@ function BlogPage() {
             <div className='grid grid-flow-row gap-6 mb-6'>
               {blogPosts.map((post, index) => {
                 return (
-                  <article
-                    key={index}
-                    className='text-white outline outline-white outline-2 rounded-xl'
-                  >
-                    <div className='grid grid-flow-col justify-between border-b-2 border-solid border-white p-2'>
-                      <div>
-                        <h4 className='md:text-xl'>{post.title}</h4>
-                      </div>
-                      <div>
-                        <h5 className='text-sm'>
-                          {formatDate(post.createdOn)}
-                        </h5>
-                      </div>
-                    </div>
-
-                    <div className='p-4'>
-                      <p>{post.content}</p>
-                    </div>
-                  </article>
+                  <BlogItem key={index} post={post} />
                 );
               })}
             </div>
